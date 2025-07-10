@@ -1,0 +1,5 @@
+#!/bin/bash
+nmcli r wifi off
+rfkill unblock wlan
+killall -9 wpa_supplicant
+screen -d -m -S ap create_ap -w 2 -c 9 wlp0s20f3 wlp0s20f3 hmm

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sed -i 's/animations = true/animations = false/g' ~/.config/picom/picom.conf
+sed -i 's/fading = true/fading = false/g' ~/.config/picom/picom.conf
+
+prime-run maim -s ~/Pictures/screenshot/$(date +%_H_%M_%S).png
+
+sed -i 's/animations = false/animations = true/g' ~/.config/picom/picom.conf
+sed -i 's/fading = false/fading = true/g' ~/.config/picom/picom.conf

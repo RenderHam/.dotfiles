@@ -1,0 +1,7 @@
+#!/bin/sh
+num = "$1"
+
+if (num == 1) {
+    
+}
+magick "$2" "$3" -geometry +0+0 -append "$3"

@@ -1,0 +1,48 @@
+#!/bin/sh
+
+help() {
+
+    printf "Usage:\nphone COMMAND [ARGS...]\nCommands:\nhelp%-7s Print help\nview%-7s View all phone mounts\nall%-8s Mount all phones\nmount%-7sMount specified phone\numount%-6sUmount all mounted phones\nmanage%-6sManage files using yazi\nadb%-8s ADB start & Mount ~/adb\nadb-kill%-3s Killall adbfs\n\n"
+
+}
+
+case "$1" in
+view)
+    gio mount -li | grep -e ^Volume -e activation_root
+    ;;
+
+all)
+    gio mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gio mount "$2)}'
+    ;;
+
+mount)
+    gio mount
+    ;;
+
+unmount)
+    fusermount /run/user/1000/gvfs/
+    ;;
+
+manage)
+    yazi /run/user/1000/gvfs/
+    ;;
+
+adb)
+    adb start-server
+    adbfs $HOME/adb/
+    ;;
+
+adb-kill)
+    killall -9 adb
+    fusermount -u $HOME/adb/
+    adb kill-server
+    ;;
+
+help)
+    help
+    ;;
+
+"")
+    help
+    ;;
+esac

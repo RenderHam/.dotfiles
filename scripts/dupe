@@ -1,0 +1,41 @@
+#!/bin/sh
+
+delay = 5
+
+#while true; do
+##    NUMLOCK=$(numlockx status)
+#    if [ "$NUMLOCK" == "Numlock is on" ]; then
+#        xdotool click 1
+#    fi
+#    sleep $delay
+#done
+
+while ("$key" == "on"); do
+    echo "hello"
+done
+
+##iswing() {
+###for j in {1..500} ; do
+##    xdotool click 1
+###//    sleep 0.5
+##done
+#}
+
+#dupe() {
+#for j in {1..7} ; do
+#    xdotool key c
+#    xdotool key c
+#    for i in {1..6} ; do
+#        xdotool key e
+#        #sleep 0.1
+#    done
+#done
+#}
+
+#if [ "$1" = "1" ]; then
+#    echo "Argument is value1"
+#elif [ "$1" = "2" ]; then
+#    echo "Argument is value2"
+#else
+#    echo "hmm"
+#fi

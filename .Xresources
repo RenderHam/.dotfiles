@@ -1,0 +1,37 @@
+! Fonts
+URxvt.font:			xft:CaskaydiaMono NF:pixelsize=12:antialias=true:hinting=true
+URxvt.boldFont:		xft:CaskaydiaMono NF:bold:pixelsize=12:antialias=true:hinting=true
+
+! Basic Interface
+URxvt.internalBorder: 20
+URxvt.scrollBar:	false
+Xft*dpi:       72
+Xft*antialias: true
+Xft*hinting:   Full
+
+! Extensions
+URxvt.perl-ext-common: default,keyboard-select,confirm-paste,eval,font-size,ibeam
+
+! Keybinds
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.C-equal:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+
+! Buffers
+URxvt.saveLines:	65535
+URxvt.iso14755: true 
+URxvt.iso14755_52: true 
+
+! Miscellaneous
+URxvt.url.select.launcher: firefox-developer-edition
+URxvt.url.select.underline: true 
+
+! Existing
+URxvt.keysym.KP_Add:    +
+URxvt.keysym.KP_Subtract: -
+URxvt.keysym.KP_Multiply: *
+URxvt.keysym.KP_Divide  : /
+URxvt.keysym.KP_Decimal : .
+URxvt.keysym.KP_Separator : ,
+

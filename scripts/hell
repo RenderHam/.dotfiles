@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if [ "$1" == "l" ]; then
+    feh --bg-scale "$2"
+elif [ "$1" == "p" ]; then
+    feh --bg-fill "$2"
+fi
+if [ "$3" == "m" ]; then
+    hellwal -m -i "$2"
+else
+    hellwal -i "$2"
+fi
+
+xrdb ~/.Xresources
+xrdb -merge ~/.cache/hellwal/colors.Xresources
+
+bspc wm -r
