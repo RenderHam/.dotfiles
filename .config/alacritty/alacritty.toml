@@ -1,0 +1,35 @@
+[general]
+import = ["~/.cache/hellwal/colors.toml"]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.8
+
+[window.padding]
+x = 12 
+y = 12
+
+[font]
+size = 8
+
+[font.bold]
+family = "CaskaydiaMono NFM"
+style = "Heavy"
+
+[font.bold_italic]
+family = "CaskaydiaMono NFM"
+style = "Heavy Italic"
+
+[font.italic]
+family = "CaskaydiaMono NFM"
+style = "Medium Italic"
+
+[font.normal]
+family = "CaskaydiaMono NFM"
+style = "Medium"
+

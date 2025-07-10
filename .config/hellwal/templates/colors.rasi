@@ -1,0 +1,10 @@
+/* colors */
+
+* {
+    bg:     #%%background.hex%%FF;
+    bg-alt: #%%color1.hex%%FF;
+    fg:     #%%foreground.hex%%FF;
+    sl:     #%%color6.hex%%FF;
+    ac:     #%%color3.hex%%FF;
+    ug:     #%%color2.hex%%FF;
+}

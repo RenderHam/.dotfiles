@@ -1,0 +1,46 @@
+#!/bin/sh
+source $HOME/.cache/hellwal/colors.sh
+# polyfill a script in my dots.
+bspwindows() {
+    case "${1:-active}" in
+    active)
+        bspc query -N -n .local.descendant_of.window.leaf.!fullscreen
+        ;;
+    inactive)
+        bspc query -N -n .local.!descendant_of.window.leaf.!fullscreen
+        ;;
+    esac
+}
+
+border_width_current=$(bspc config border_width)
+
+# half if even, 1px to outer if odd
+border_width_in_normal=15
+border_width_out_normal=5
+
+#border_color_in_normal=0A0A0A
+#border_color_out_normal=ffffff
+
+type theme >/dev/null 2>&1 && eval "$(theme get)"
+
+_chwb2() {
+    colorType=$1
+    shift
+    _getVal() {
+        eval echo \$${1}_${colorType}
+    }
+
+    [ "$width_normal" ] ||
+        echo "$@" | sed 's/ /\n/g' | xargs -I{} bspc config -n {} border_width $(_getVal width)
+
+    chwb2 -I $(_getVal border_color_in) -O $(_getVal border_color_out) -i $(_getVal border_width_in) -o $(_getVal border_width_out) $@
+}
+
+width_normal=$((border_width_in_normal + border_width_out_normal))
+bspc config border_width "$width_normal"
+
+_chwb2 normal $(bspwindows)
+
+bspc subscribe node_state node_geometry node_add node_swap node_focus node_activate | while read line; do
+    _chwb2 normal $(bspwindows)
+done

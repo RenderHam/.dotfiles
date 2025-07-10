@@ -1,0 +1,37 @@
+#!/bin/sh
+
+adjust() {
+    bspc config window_gap 20
+    bspc config right_padding 110
+    bspc config left_padding 110
+    bspc config top_padding 70
+    bspc config bottom_padding 70
+}
+
+compress() {
+    bspc config window_gap 0
+    bspc config right_padding 40
+    bspc config left_padding 40
+    bspc config top_padding 60
+    bspc config bottom_padding 30
+}
+
+full() {
+    bspc config window_gap 40
+    bspc config right_padding 0
+    bspc config left_padding 0
+    bspc config top_padding 20
+    bspc config bottom_padding 0
+}
+
+case "$1" in
+adjust)
+    adjust
+    ;;
+compress)
+    compress
+    ;;
+full)
+    full
+    ;;
+esac

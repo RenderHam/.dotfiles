@@ -1,0 +1,159 @@
+/*****----- Global Properties -----*****/
+@import "~/.cache/hellwal/colors.rasi"
+
+* {
+    font: "CaskaydiaMono NF 10";
+}
+
+/*
+USE_BUTTONS=YES
+*/
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @sl;
+    cursor:                      "default";
+    background-color:            transparent;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @sl;
+    background-color:            transparent;
+    children:                    [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                @sl;
+    background-color:            transparent;
+    text-color:                  @fg;
+    children:                    [ "textbox-prompt-colon", "prompt"];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     12px 16px;
+    border-radius:               0px;
+    background-color:            @ug;
+    text-color:                  @bg-alt;
+}
+prompt {
+    enabled:                     true;
+    padding:                     12px;
+    border-radius:               0px;
+    background-color:            @ac;
+    text-color:                  @bg-alt;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px 100px;
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               5px;
+    border-color:                @sl;
+    background-color:            @bg;
+    text-color:                  @fg;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    placeholder-color:           @fg;
+    blink:                       true;
+    markup:                      true;
+}
+error-message {
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @sl;
+    background-color:            @bg-alt;
+    text-color:                  @fg;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       2;
+    cycle:                       false;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     5px 0 0 10px;
+    margin:                      0;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @sl;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0;
+    margin:                      1px 10px 10px 10px;
+    padding:                     20px 0 30px 0;
+    border:                      0px solid;
+    border-radius:               5px;
+    border-color:                @sl;
+    background-color:            @bg;
+    text-color:                  @fg;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        "Symbols Nerd Font 32";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element selected.normal {
+    background-color:            var(sl);
+    text-color:                  var(bg-alt);
+}

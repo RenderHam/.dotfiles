@@ -1,0 +1,12 @@
+[[plugin.deps]]
+use = "tasnimAlam/rotate-image"
+rev = "26be45c"
+hash = "82d4dfc7647abac3ff687cd6c8281844"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mime-ext"
+rev = "7c174cc"
+hash = "4c49c446328c4553a4ccab7facc10b21"
+
+[flavor]
+deps = []

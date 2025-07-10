@@ -1,0 +1,11 @@
+:root {
+    --tab-active-bg-color: #%%color6.hex%%;
+    --tab-inactive-bg-color: #%%background.hex%%;
+    --tab-active-fg-fallback-color: #%%color5.hex%%;
+    --tab-inactive-fg-fallback-color: #%%foreground.hex%%;
+    --urlbar-focused-bg-color: none;
+    --urlbar-not-focused-bg-color: none;
+    --toolbar-bgcolor: none !important;
+
+    --newtab-text-primary-color: #%%color5.hex%% !important;
+}

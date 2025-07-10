@@ -1,0 +1,38 @@
+! Colorscheme
+
+! special
+*.foreground: #%%foreground.hex%%
+*.background: #%%background.hex%%
+*.cursorColor: #%%cursor.hex%%
+
+! black
+*.color0: #%%color0.hex%%
+*.color1: #%%color1.hex%%
+
+! red
+*.color2: #%%color2.hex%%
+*.color3: #%%color3.hex%%
+
+! green
+*.color4: #%%color4.hex%%
+*.color5: #%%color5.hex%%
+
+! yellow
+*.color6: #%%color6.hex%%
+*.color7: #%%color7.hex%%
+
+! blue
+*.color8: #%%color8.hex%%
+*.color9: #%%color9.hex%%
+
+! magenta
+*.color10: #%%color10.hex%%
+*.color11: #%%color11.hex%%
+
+! cyan
+*.color12: #%%color12.hex%%
+*.color13: #%%color13.hex%%
+
+! white
+*.color14: #%%color14.hex%%
+*.color15: #%%color15.hex%%

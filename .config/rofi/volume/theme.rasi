@@ -1,0 +1,156 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+/*****----- Global Properties -----*****/
+
+@import "~/.cache/hellwal/colors.rasi"
+
+/*
+USE_ICON=YES
+*/
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @sl;
+    cursor:                      "default";
+    background-color:            @bg;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    margin:                      0px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview", "message" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     25px;
+    padding:                     100px 50px;
+    border:                      0px;
+    border-radius:               20px;
+    border-color:                @sl;
+    background-color:            transparent;
+    text-color:                  @fg;
+    children:                    [ "dummy", "textbox-prompt-colon", "prompt", "dummy"];
+}
+
+dummy{
+    background-color:            transparent;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     10px 13px;
+    border-radius:               10px;
+    background-color:            @ug;
+    text-color:                  @bg;
+}
+prompt {
+    enabled:                     true;
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            @ac;
+    text-color:                  @bg;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @sl;
+    background-color:            @bg-alt;
+    text-color:                  @fg;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     6;
+    lines:                       1;
+    cycle:                       true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    
+    spacing:                     20px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     30px 10px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @sl;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        "feather 28";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:            var(bg-alt);
+    text-color:                  var(fg);
+}
+element normal.urgent,
+element alternate.urgent,
+element sl.active {
+    background-color:            var(ug);
+    text-color:                  var(bg);
+}
+element normal.active,
+element alternate.activity,
+element sl.urgent {
+    background-color:            var(ac);
+    text-color:                  var(bg);
+}
+element selected.normal {
+    background-color:            var(sl);
+    text-color:                  var(bg);
+}
