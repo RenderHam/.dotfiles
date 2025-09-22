@@ -7,7 +7,7 @@ source $HOME/.config/bspwm/sc/resize-gaps full
 bspc monitor -d 1 2 3 4
 
 # Appearance
-bspc config border_width 5
+bspc config border_width 20
 #source $HOME/.config/bspwm/sc/borders
 #bspc config border_radius 20
 #bspc config normal_border_color "#000000"
@@ -33,4 +33,4 @@ bspc rule -a XAVA border=off
 xsetroot -cursor_name left_ptr
 
 source $HOME/.config/bspwm/sc/autostart
-#source $HOME/.config/bspwm/sc/2b
+source $HOME/.config/bspwm/sc/2b
